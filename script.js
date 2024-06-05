@@ -90,8 +90,17 @@ let started = false;
 let level = 0;
 
 let h2 = document.querySelector("h2");
+let btnStart = document.querySelector(".btnStart");
 
 document.addEventListener("keypress", function () {
+  if (!started) {
+    console.log("Game is started");
+    started = true;
+    levelUp();
+  }
+});
+
+btnStart.addEventListener("click", function () {
   if (!started) {
     console.log("Game is started");
     started = true;
